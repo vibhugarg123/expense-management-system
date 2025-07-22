@@ -3,6 +3,7 @@ package com.slice.demoproject.controllers;
 import com.slice.demoproject.domains.CreateUserRequest;
 import com.slice.demoproject.domains.CreateUserResponse;
 import com.slice.demoproject.services.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +22,7 @@ public class UserController {
   }
 
   @PostMapping
-  public CreateUserResponse createUser(@RequestBody CreateUserRequest request) {
+  public CreateUserResponse createUser(@RequestBody @Valid CreateUserRequest request) {
     return userService.addUser(request);
   }
 }
