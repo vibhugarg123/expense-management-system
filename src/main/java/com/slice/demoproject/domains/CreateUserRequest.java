@@ -7,13 +7,9 @@ import lombok.Data;
 
 @Data
 public class CreateUserRequest {
-  @NotBlank private String name;
+  @NotBlank private String userName;
 
   @NotBlank @Email private String email;
-
-  @NotBlank
-  @Pattern(regexp = "^\\d{10}$", message = "Phone number must be exactly 10 digits")
-  private String phoneNumber;
 
   @NotBlank
   @Pattern(
