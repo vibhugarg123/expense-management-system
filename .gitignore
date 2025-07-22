@@ -1,0 +1,21 @@
+/target
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+
+.classpath
+.factorypath
+.project
+.settings/
+mvnw.*
+mvnw
+
+## Intellij IDEA ##
+.idea
+*.iws
+*.iml
+*.ipr
+.gradle/
+
+
+## OSX ##
+.DS_Store
